@@ -1,0 +1,38 @@
+<!--p>filters works!</p-->
+<code *ngIf="debug">
+    <h3>Channel: {{channel}}</h3>
+    <p class="red">{{rCoord}}</p>
+    <p class="green">{{gCoord}}</p>
+    <p class="blue">{{bCoord}}</p>
+</code>
+
+<svg
+    width="826"
+    height="620"
+    viewBox="0 0 826 620"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <defs>
+        <filter id="Matrix">
+            <feComponentTransfer in="curves" result="table">
+                <ng-container >
+                    <feFuncR type="table" [attr.tableValues]=rCoord></feFuncR>
+                    <feFuncG type="table" [attr.tableValues]=gCoord></feFuncG>
+                    <feFuncB type="table" [attr.tableValues]=bCoord></feFuncB>
+                </ng-container>
+               
+            </feComponentTransfer>
+        </filter>
+
+    </defs>
+ 
+  <foreignObject width=480 height=800  style="filter: url(#Matrix)"  color-interpolation="sRGB">
+
+    <img src="/assets/zinnowitz.png" width="480" />
+
+  </foreignObject> 
+
+
+
+</svg>

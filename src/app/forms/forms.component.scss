@@ -1,0 +1,77 @@
+form {
+    max-width: 700px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #393a3c;
+
+    input, textarea {
+        font-size: 100%;
+        overflow: visible;
+        width: calc(100% - 4em);
+        margin: 5px 0 22px 0;
+        max-width: 100%;
+        flex: 1 0 auto;
+        text-align: left;
+        padding: 0.7em 1em;
+        box-shadow: none;
+        padding-right: 2.7em !important;
+        border-radius: .3rem;
+        .ng-invalid.ng-touched {
+            outline-color: #d01919;
+            border-bottom-color: #d01919;
+            border-bottom-width: 0.2em;
+            margin-bottom: 20px;
+            outline: 0;
+        }
+    }
+
+
+    button[type=submit] {
+        background-color: #287e2b;
+        color: #fff;
+    }
+
+    button, a.button {
+        box-sizing: inherit;
+        overflow: visible;
+        cursor: pointer;
+        display: inline-block;
+        min-height: 1em;
+        border: none;
+        vertical-align: initial;
+        background: #e0e1e2 none;
+        color: rgba(0, 0, 0, .6);
+        font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
+        margin: .25em .25em 0 0;
+        padding: .8em 1.5em;
+        text-transform: none;
+        text-shadow: none;
+        font-weight: 700;
+        line-height: 1em;
+        font-style: normal;
+        text-align: center;
+        text-decoration: none;
+        border-radius: .3rem;
+        -webkit-user-select: none;
+        user-select: none;
+        transition: opacity .1s ease, background-color .1s ease, color .1s ease, box-shadow .1s ease, background .1s ease;
+        -webkit-tap-highlight-color: transparent;
+        box-shadow: inset 0 0 0 1px transparent, inset 0 0 0 0 rgba(34, 36, 38, .15);
+        font-size: .8rem;
+    }
+    button:disabled, a.button:disabled, button:disabled:hover, a.button:disabled:hover {
+        cursor: not-allowed !important;
+        background-color: rgba(0, 0, 0, 0.05) !important;
+        color: #888888 !important;
+    }
+    [password] {
+        position: relative;
+   
+        .glyphicon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+    }
+}

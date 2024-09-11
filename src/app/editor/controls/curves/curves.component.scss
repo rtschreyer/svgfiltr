@@ -1,0 +1,104 @@
+:host{
+    position:absolute;
+  }
+  
+  .curves-control {
+      position: absolute;
+    }
+    
+    #panel {
+        fill:rgb(221,221,221);
+        stroke-width:3;
+        stroke:rgb(0,0,0);
+      }
+    
+      .gridLine {
+        stroke: black; 
+        stroke-width: 1; 
+        stroke-opacity: 0.4; 
+        stroke-dasharray: 5,5
+      }
+    
+    
+      .red {
+        stroke: red;
+        fill: red;
+        opacity: 0;
+      }
+    
+      .redLine {
+        stroke: red;
+        stroke-width: 2;
+        opacity: 0.6;
+      }
+  
+      .green {
+          stroke: green;
+          fill: green;
+          opacity: 0;
+      }
+  
+      .greenLine {
+          stroke: green;
+          stroke-width: 2;
+          opacity: 0.6;
+      }
+  
+      .blue {
+          stroke: blue;
+          fill: blue;
+          opacity: 0;
+      }
+  
+      .blueLine {
+          stroke: blue;
+          stroke-width: 2;
+          opacity: 0.6;
+      }
+  
+  
+      .activated{
+          opacity:1 !important;
+          stroke-width: 6;
+      }
+  
+      form {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: block;
+        z-index: 100;
+        position: relative;
+        top: 60px;
+        left: 630px;
+        width: 120px;
+        fieldset {
+          border:none;
+          display: block;
+          position: relative;
+          width:120px;
+          padding:0;
+          input {
+              display: block;
+              position:relative;
+              width: 10px;
+              float: left;
+          }
+          label {
+            display: block;
+            margin-left: 20px;
+            width:120px;
+            span {
+              display: inline-block;
+              position: absolute;
+              right: 0;
+              padding: 13 0;
+              width: 60px;
+              text-align: right;
+              a{
+                text-decoration:none;
+                cursor:pointer;
+                border-bottom: 1px dotted #999;
+              }
+            }
+          }
+        }
+      }

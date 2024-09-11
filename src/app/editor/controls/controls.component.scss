@@ -1,0 +1,28 @@
+
+nav {
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+    height: 38px;
+    left: 0;
+    position: relative;
+}
+
+ul {
+    display:inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    li {
+        list-style-type: none;
+        float: left;
+        margin: 0;
+        padding: 8px 12px 2px;
+        border: 2px solid #333;
+        border-radius: 6px 6px 0 0;
+
+        a, a.active {
+            text-decoration: none;
+            color:#333;
+        }
+    }
+}

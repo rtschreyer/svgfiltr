@@ -1,0 +1,63 @@
+:host{
+    position:absolute;
+  }
+
+.control {
+    position: absolute;
+  }
+
+  div.control{
+    border: 3px solid #000;
+    background: #ddd;
+    width:620px;
+    height:620px;
+    margin:10px;
+    padding:24px;
+
+    fieldset {
+      border: none;
+    }
+
+    label {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      display: inline-block;
+      position: relative;
+      width: 160px;
+      right: 0;
+      text-align: right;
+      font-size: 18px;
+      padding-bottom: 8px;
+      line-height: 20px;
+      vertical-align: text-bottom;
+    }
+
+    input.slider {
+      width: 420px;
+      margin: 42px 0 24px;
+    }
+  }
+  
+  #panel {
+      fill:#dddddd;
+      stroke-width:3;
+      stroke:rgb(0,0,0);
+
+    }
+  
+
+    form {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: block;
+        z-index: 100;
+        position: relative;
+        top: 60px;
+        left: 630px;
+        width: 120px;
+        fieldset {
+          border:none;
+          display: block;
+          position: relative;
+          width:120px;
+          padding:0;
+        }
+    }

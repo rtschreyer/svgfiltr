@@ -1,0 +1,33 @@
+:host {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+
+
+    code {
+        display: block;
+        padding: 24px;
+        position: relative;
+        z-index: 100;
+        background: rgba($color: #fff2d0, $alpha: 0.3);
+
+        .red {
+            color: red;
+        }
+        .green {
+            color: green;
+        }
+        .blue {
+            color: blue;
+        }
+    }
+    svg {
+        position: absolute;
+        top: 0;
+    }
+    img {
+        position: relative;
+        top: 0;
+        vertical-align: top;
+    }
+}

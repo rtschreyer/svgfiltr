@@ -1,0 +1,63 @@
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="626"
+    height="620"
+    viewBox="0 0 626 620"
+
+    fill="none"
+    class="curves-control"
+>
+   
+<g id="grid">
+    <rect id="panel" x="10" y="10" width="600" height="590"> </rect> 
+
+    
+        <line  *ngFor="let lgy of gridLinesY;let i = index" y1="50" y2="550" [attr.x1]='75+i*50' [attr.x2]="75+i*50" class="gridLine" />
+        <line  *ngFor="let lgx of gridLinesX;let i = index" x1="50" x2="550" [attr.y1]='75+i*50' [attr.y2]="75+i*50" class="gridLine" />
+  
+
+</g>
+<g id="lines">
+    <circle id="p0" cx="75" cy="525" r="8" class="red" />
+    <circle id="p100" cx="525" cy="75" r="8" class="red" />
+    <circle id="p0" cx="75" cy="525" r="8" class="green" />
+    <circle id="p100" cx="525" cy="75" r="8" class="green" />
+    <circle id="p0" cx="75" cy="525" r="8" class="blue" />
+    <circle id="p100" cx="525" cy="75" r="8" class="blue" />
+
+    <ng-container id="red"  *ngFor="let point of rPoints.slice(0,rPoints.length-1);let i = index;">
+        <path [attr.d]="'M '+rPoints[i][0]+' '+ rPoints[i][1]+' L '+rPoints[i+1][0]+' '+ rPoints[i+1][1]" class="redLine activated red" ></path>
+        <circle [attr.id]="'p_' + i" [attr.cx]="rPoints[i][0]" [attr.cy]="rPoints[i][1]" r="8" class="red activated" />
+    </ng-container>
+
+    <ng-container id="green" *ngFor="let point of gPoints.slice(0,gPoints.length-1);let i = index;">
+        <path [attr.d]="'M '+gPoints[i][0]+' '+ gPoints[i][1]+' L '+gPoints[i+1][0]+' '+ gPoints[i+1][1]" class="greenLine activated green" ></path>
+        <circle [attr.id]="'p_' + i" [attr.cx]="gPoints[i][0]" [attr.cy]="gPoints[i][1]" r="8" class="green activated" />
+    </ng-container>
+
+    <ng-container id="blue" *ngFor="let point of bPoints.slice(0,bPoints.length-1);let i = index;">
+        <path [attr.d]="'M '+bPoints[i][0]+' '+ bPoints[i][1]+' L '+bPoints[i+1][0]+' '+ bPoints[i+1][1]" class="blueLine activated blue" ></path>
+        <circle [attr.id]="'p_' + i" [attr.cx]="bPoints[i][0]" [attr.cy]="bPoints[i][1]" r="8" class="blue activated" />
+    </ng-container>
+    
+</g>
+
+</svg>
+
+
+<form [formGroup]="activatedColor">
+    <h3>Edit ColorChannel:</h3>
+    <fieldset>
+        <input type="radio" value="red" id="activeColor" name="activeColor"
+            formControlName="activeColor" (change)="colorChange($event,'red')"/>
+        <label for="activated">Red<span><a (click)=reset()>reset</a></span></label>
+        <input type="radio" value="green" id="activeColor" name="activeColor"
+            formControlName="activeColor" (change)="colorChange($event,'green')"/>
+        <label for="activated">Green<span><a (click)=reset()>reset</a></span></label>
+        <input type="radio" value="blue" id="activeColor" name="activeColor"
+            formControlName="activeColor"   (change)="colorChange($event,'blue')"/>
+        <label for="activated">Blue<span><a (click)=reset()>reset</a></span></label>
+    </fieldset>
+
+</form>

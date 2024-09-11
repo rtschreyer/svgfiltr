@@ -1,0 +1,40 @@
+
+
+<form ngForm novalidate #myForm="ngForm">
+    <input  type="text"
+            autocomplete="name"
+            placeholder="name"
+            name="name"
+            #name="ngModel"
+            required
+            ngModel />
+    <span>{{name.errors | json}}</span>
+
+    <span ngModelGroup="credentials" #credits="ngModelGroup">
+        <input name="email"
+               placeholder="email address"
+               #email="ngModel"
+               email required
+               (click)="updateMail($event)"
+               ngModel />
+        <span>{{email.errors | json}}</span>
+       
+        <input type="password"
+               name="password" 
+               (ngModelChange)="passwordChange($event)"
+               placeholder="Password"
+               #password="ngModel" 
+               required minlength="8"
+               ngModel  />
+        <span>{{password.errors | json}}</span>
+       
+    </span>
+    <div>
+    <textarea name="msg" 
+                cols="84" rows="5" ngModel 
+                placeholder="Your Complaint.."></textarea>
+    </div>
+    <button type="submit" name="submit" [disabled]="myForm.invalid">Login</button>
+</form>
+
+<p>{{myForm.value | json}}</p>
